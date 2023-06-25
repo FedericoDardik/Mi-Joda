@@ -1,0 +1,149 @@
+@media screen and (min-width: 1000px) {
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Archivo Black', cursive; 
+        font-weight: 100;
+      }
+    /* ------------------------------------------------------------------------------------------------- */
+    html, body {
+        height: 100%;
+    }
+    /* --------------------------------------- FLEX-CONTAINER ------------------------------------------ */
+    .flex-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* ------------------------------------------- HEADER ---------------------------------------------- */  
+    .header {
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+        position: relative;
+        box-shadow: 0vw 0vw 2vw black;
+    }
+
+    .header img {
+        width: 14vw;
+        height: auto;
+        margin: 1vw;
+        position: relative;
+        top: 0.5vw;
+    }
+    /* -------------------- LEVITACION ------------------- */  
+    .header img {
+        animation: levitate-animation 2.5s ease-in-out infinite;
+      }
+
+      @keyframes levitate-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-0.5vw);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      /* ----------------------------------------- SECTION --------------------------------------------- */
+
+    .section {
+        flex-grow: 1;
+        background-image: url(../pictures/background.jpg);
+        background-size: contain;
+        background-repeat: repeat;
+        color: white;
+    }
+
+    .caja-sorteo {
+        margin: auto;
+        margin-top: 4vw;
+        text-align: center;
+        background-color: black;
+        width: 70%;
+        height: 30vw;
+        border-radius: 1vw;
+    }
+
+    .label {
+        display: block;
+        padding-top: 2.5vw;
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .textarea {
+        width: 55%;
+        height: 40%;
+        border-radius: 1vw;
+        background-color: grey;
+        color: black;
+        resize: none;
+        padding: 1vw;
+        text-align: center;
+        font-size: 1.2vw;
+        cursor: pointer;
+    }
+
+    .boton-realizar {
+        display: block;
+        margin: auto;
+        margin-top: 1vw;
+        width: 12vw;
+        height: 3vw;
+        border-radius: 1vw;
+        background-color: rgb(254, 158, 0);
+        font-size: 1.2vw;
+        color: black;
+        cursor: pointer;
+    }
+
+    .ganador {
+        margin-top: 1vw;
+        font-size: 2.5vw;
+    }
+
+    /* -------------------------------------------- FOOTER --------------------------------------------- */
+    
+    .footer {
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+    }
+
+    .footer-ul li{
+        display: inline-block;
+        width: auto;
+        padding: 2vw 3vw;
+        color: white;
+        font-size: 1.2vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .footer-ul li:first-child {
+        padding-left: 0vw;
+    }
+
+    .footer-ul li:nth-child(2) {
+        padding-left: 7vw;
+        padding-right: 5vw;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+        padding: 1.5vw 1vw;
+    }
+
+    .footer a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-ul a:hover {
+        color: black;
+        transition: .2s;
+    }
+}

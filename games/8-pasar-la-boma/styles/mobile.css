@@ -1,0 +1,144 @@
+@media screen and (max-width: 1000px) {
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Bangers', 'Archivo Black', cursive; 
+        font-weight: 100;
+      }
+/* ------------------------------------------------------------------------------------------------- */
+    html, body {
+        height: 100%;
+        user-select: none;
+    }
+/* --------------------------------------- FLEX-CONTAINER ------------------------------------------ */
+    .flex-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+/* ------------------------------------------- HEADER ---------------------------------------------- */  
+    .header {
+        width: 100%;
+        height: 18vw;
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+        position: relative;
+        box-shadow: 0vw 0vw 2vw black;
+    }
+
+    .header img {
+        width: 40vw;
+        height: auto;
+        margin-top: 3vw;
+        position: relative;
+        top: 0.5vw;
+    }
+/* -------------------- LEVITACION ------------------- */  
+    .header img {
+        animation: levitate-animation 2.5s ease-in-out infinite;
+      }
+
+      @keyframes levitate-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-0.5vw);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+/* ----------------------------------------- SECTION --------------------------------------------- */
+    .section {
+        flex-grow: 1;
+        background-image: url(../pictures/background.jpg);
+        background-size: contain;
+        background-repeat: repeat;
+        color: white;
+        letter-spacing: 0.1vw;
+        font-size: 1.1vw;
+    }
+/*---------- ARTICLE-1 ----------- */
+
+    .article-1 {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .article-1 img {
+        margin-top: 1vw;
+        width: 70vw;
+        height: auto;
+    }
+
+/*---------- ARTICLE-2 ----------- */
+
+    .article-2 div {
+        margin: auto;
+        background-color: black;
+        color: white;
+        border-radius: 1vw;
+        width: 90%;
+        padding: 3vw 3vw;
+        letter-spacing: 0.2vw;
+        text-align: center;
+        font-size: 5.5vw;
+        margin-bottom: 4vw;
+        margin-top: 3vw;
+    }
+
+    .article-2 h3 {
+        font-size: 6.5vw;
+        color: #ff9f00;
+        margin-bottom: 2vw;
+    }
+
+/* ----------------------- FOOTER -------------------------- */
+
+    .footer {
+        width: 100%;
+        height: 20vw;
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+    }
+
+    .footer-ul {
+        margin-top: 2vw;
+    }
+
+    .footer-ul li {
+        display: inline-block;
+        margin-bottom: 3vw;
+    }
+    
+    .texto {
+        font-size: 3vw;
+        text-decoration: none;
+        color: white;
+        padding: 2vw 0vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .volver {
+        font-size: 6vw;
+        text-decoration: none;
+        color: white;
+        padding: 1vw 18vw;
+        border-top: 0.1vw solid white;
+    }
+
+    .texto:hover {
+        color:black;
+        transition: .5s;
+    }
+
+    .volver:hover {
+        color:black;
+        transition: .5s;
+    }
+
+}

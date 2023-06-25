@@ -1,0 +1,167 @@
+@media screen and (min-width: 1000px) {
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Archivo Black', cursive; 
+        font-weight: 100;
+      }
+    /* ------------------------------------------------------------------------------------------------- */
+    html, body {
+        height: 100%;
+    }
+    /* --------------------------------------- FLEX-CONTAINER ------------------------------------------ */
+    .flex-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* ------------------------------------------- HEADER ---------------------------------------------- */  
+    .header {
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+        position: relative;
+        box-shadow: 0vw 0vw 2vw black;
+    }
+
+    .header img {
+        width: 14vw;
+        height: auto;
+        margin: 1vw;
+        position: relative;
+        top: 0.5vw;
+    }
+    /* -------------------- LEVITACION ------------------- */  
+    .header img {
+        animation: levitate-animation 2.5s ease-in-out infinite;
+      }
+
+      @keyframes levitate-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-0.5vw);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      /* ----------------------------------------- SECTION --------------------------------------------- */
+    .section {
+        flex-grow: 1;
+        background-image: url(../pictures/background.jpg);
+        background-size: contain;
+        background-repeat: repeat;
+        display: grid;
+        grid-template-areas: 'article1 article2';
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        align-items: center;
+        color: white;
+        letter-spacing: 0.1vw;
+        font-size: 1vw;
+        font-weight: 100;
+    }
+
+    .article-1 {
+        grid-area: article1;
+    }
+
+    .article-2 {
+        grid-area: article2;
+    }
+
+    .article-1 div {
+        margin-left: 1.5vw;
+        background-color: rgb(0, 0, 0);
+        border-radius: 1vw;
+        width: 95%;
+        height: 17vw;
+        padding: 0.5vw 1vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .article-2 div {
+        margin-right: 1vw;
+        background-color: rgb(0, 0, 0);
+        border-radius: 1vw;
+        width: 95%;
+        height: 17vw;
+        padding: 0.5vw 1vw;
+        letter-spacing: 0.1vw;
+    }
+/* ---------- FONT SIZE TEXTO ------------- */
+    .article-1 .alto {
+        font-size: 1.4vw;
+    }
+
+    .article-2 .alto {
+        font-size: 1.15vw;
+    }
+
+    .article-1 .bajo {
+        font-size: 1.24vw;
+    }
+
+    .article-2 .bajo {
+        font-size: 1.25vw;
+    }
+/* ---------- MARGEN SUPERIOR BLOQUES INFERIORES ------------- */
+    .bajo {
+        margin-top: 1vw;
+    }
+/* ---------- PROPIEDADES TITULOS Y TEXTO ------------- */
+    section h1 {
+        font-size: 1.4vw;
+        text-align: center;
+        text-decoration: underline 0.1vw;
+        color: #ff9f00;
+    }
+
+    section p {
+        text-align: center;
+    }
+
+    /* -------------------------------------------- FOOTER --------------------------------------------- */
+    
+    .footer {
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+    }
+
+    .footer-ul li{
+        display: inline-block;
+        width: auto;
+        padding: 2vw 3vw;
+        color: white;
+        font-size: 1.2vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .footer-ul li:first-child {
+        padding-left: 0vw;
+    }
+
+    .footer-ul li:nth-child(2) {
+        padding-left: 7vw;
+        padding-right: 5vw;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+        padding: 1.5vw 1vw;
+    }
+
+    .footer a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-ul a:hover {
+        color: black;
+        transition: .2s;
+    }
+}

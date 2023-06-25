@@ -1,0 +1,456 @@
+@media screen and (min-width: 800px) and (max-width: 1000px){
+    * {
+        font-family: 'Bangers', 'Archivo Black', cursive; 
+    }
+    /* -------------------------------------- CONTENEDOR GRID -------------------------------------------- */
+    html {
+        scroll-behavior: smooth;
+        user-select: none;
+    }
+
+    .body {
+        display: grid;
+        grid-template-areas: 'header'
+                             'article'
+                             'footer';
+        grid-template-columns: auto;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .aside {
+        grid-area: aside;
+    }
+
+    .article {
+        grid-area: article;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    /* ------------------------------------------- HEADER ------------------------------------------------- */
+
+    .header {
+        width: 100%;
+        height: 12vw;
+        background-color: rgb(40, 47, 146);
+    }
+
+    .header img {
+        width: 40vw;
+        height: auto;
+        position: absolute;
+        top: 22vw;
+        left: 32vw;
+    }
+
+    .header-nav {
+        text-align: center;
+        margin-top: 3.5vw;
+    }
+
+    .header-ul {
+        display: inline-block;
+    }
+
+    .header-ul li {
+        display: inline-block;
+        color: white;
+        margin-left: 2vw;
+        letter-spacing: 0.2vw;
+        font-size: 5vw;
+    }
+
+    .header a:visited{
+        color:white;
+        text-decoration: none;
+    }
+
+    .header a {
+        color: white;
+        text-decoration: none;
+        padding: 1vw 2vw;
+    }
+
+    .header a:hover {
+        color: #ff9f00;
+        transition: .2s;
+    }
+
+
+    /* ------------------------------------------- SECTION ------------------------------------------------- */
+
+    .section1 {
+        background-color: white;
+    }
+
+    /* ------------------- ARTICLE-1 --------------------- */
+
+    .section1-art1 {
+        width: 100%;
+        height: 92vh;
+        color: white;
+        background-image: url(../pictures/mobile/image-800x1000.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: default;
+    }
+
+    .article1-h2 {
+        font-size: 7vw;
+        position: absolute;
+        top: 26vw;
+        left: 31.5vw;
+        letter-spacing: 0.5vw;
+        font-weight: 200;
+    }
+
+    .article1-p {
+        font-size: 3.5vw;
+        width: 55%;
+        text-align: center;
+        position: relative;
+        top: 36vw;
+        left: 34.5vw;
+        letter-spacing: 0.3vw;
+        font-weight: 100;
+    }
+
+    .b {
+        text-decoration: none;
+        color: #ff9f00;
+    }
+
+    .article1-levitacion {
+        height: 100%;
+    }
+
+    /* ----- LEVITACIÓN ------ */
+
+    .article1-levitacion, .header img {
+        display: inline-block;
+        animation: levitate-animation 3s ease-in-out infinite;
+      }
+
+      @keyframes levitate-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-1.3vw);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+    /* ------------------- ARTICLE-2 --------------------- */
+
+    .section1-art2 {
+        background-image: url(../pictures/background/background-article2.jpg);
+        background-repeat: repeat;
+        background-size: contain;
+        color: white;
+        height: 860vw;
+        border-top: 1vw solid black;
+    }
+
+    .article2-h3 {
+        text-align: center;
+        font-size: 7vw;
+        letter-spacing: 0.3vw;
+        font-weight: 200;
+        padding: 1vw 0vw;
+        width: 22vw;
+        border-radius: 1vw;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        top: 4vw;
+        margin: auto;
+        margin-bottom: 8vw;
+    }
+
+    .contenedor-juegos {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        justify-content: space-around;
+        grid-row-gap: 5vw;
+    }
+
+    /* -------------------------------------------- CARTAS --------------------------------------------------- */
+    .card {
+        position: relative;
+        width: 40vw;
+        height: 70vw;
+        margin: auto;
+    }
+    /*----- FRENTE VISIBLE ------ */
+    .card .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 1vw;
+        overflow: hidden;
+        transition: .5s;
+    }
+    /*----- IMAGEN Y TITULO ------ */
+    .card .front {
+        transform: perspective(80vw) rotateY(0deg);
+        box-shadow: 0 0.5vw 1vw #000;
+    }
+    /*----- IMAGEN ------ */
+    .card .front img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /*----- BACK NO VISIBLE ------ */
+    .card .back {
+        transform: perspective(80vw) rotateY(180deg);
+        background-image: url(../pictures/cards/0-back-card.png);
+        background-size: cover;
+        background-repeat: no repeat;
+        padding: 1.5vw;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 0.5vw 1vw #000;
+    }
+    /*----- LINK BACK ------ */
+    .card .back .link {
+        border-top: solid 1px white;
+        height: 2.5vw;
+        line-height: 3.2vw;
+    }
+    /*----- LINK BACK ------ */
+    .card .back .link a {
+        text-decoration: none;
+        color: white;
+        padding: 1vw 5vw;
+        font-size: 1.3vw;
+        letter-spacing: 0.1vw;
+    }
+    /*----- LINK BACK ------ */
+    .card .back .link a:hover {
+        color: #ff9f00;
+        font-size: 1.8vw;
+        transition: .2s;
+    }
+    /*----- TEXTO P BACK ------ */
+    .card .back p {
+        letter-spacing: 0.1vw;
+        font-size: 1.3vw;
+    }
+    /*----- HOVER FRENTE ------ */
+    .card:hover .front {
+        transform: perspective(80vw) rotateY(180deg);
+    }
+    /*----- HOVER BACK ------ */
+    .card:hover .back {
+        transform: perspective(80vw) rotateY(360deg);
+    }
+
+    /*--------- ESTILOS TEXTO TRASERO CARTAS -----------*/
+
+    .texto-carta-1 {
+        margin-top: 10vw;
+    }
+
+    .texto-carta-2 {
+        margin-top: 6vw;
+    }
+
+    .texto-carta-3 {
+        margin-top: 9vw;
+    }
+
+    .texto-carta-4 {
+        margin-top: 10vw;
+    }
+
+    .texto-carta-5 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-6 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-7 {
+        margin-top: 10vw;
+    }
+
+    .texto-carta-8 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-9 {
+        margin-top: 10vw;
+    }
+
+    .texto-carta-10 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-11 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-12 {
+        margin-top: 10vw;
+    }
+
+    .texto-carta-13 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-14 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-15 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-16 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-17 {
+        margin-top: 10.5vw;
+    }
+
+    .texto-carta-18 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-19 {
+        margin-top: 12vw;
+    }
+
+    .texto-carta-20 {
+        margin-top: 11vw;
+    }
+
+    .texto-carta-21 {
+        margin-top: 12vw;
+    }
+
+    /* ------------------- ARTICLE-3 --------------------- */
+
+    .section1-art3 {
+        background-image: url(../pictures/background/background-article3-pink.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        height: 73vw;
+        padding-top: 7vw;
+        border-top: 1vw solid black;
+    }
+
+    .article3-h4 {
+        margin: auto;
+        font-size: 3.5vw;
+        letter-spacing: 0.2vw;
+        margin-bottom: 5vw;
+        padding: 0.7vw 0.9vw;
+        width: 13.4vw;
+        border-radius: 1vw;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .contenedor-playlist {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        justify-content: space-around;
+        grid-row-gap: 3vw;
+    }
+
+    .contenedor-playlist img {
+        width: 18vw;
+        height: auto;
+        border-radius: 1vw;
+    }
+
+    .contenedor-playlist p {
+        text-align: center;
+        font-size: 1.8vw;
+        padding: 0.2vw;
+        width: auto;
+        margin: auto;
+        margin-top: 1.5vh;
+        background-color: rgba(0, 0, 0, 0.938);
+        letter-spacing: 0.1vw;
+        position: relative;
+        bottom: 5vw;
+    }
+    /* ------ EFECTO PLAYLIST ------ */
+
+    /* --- PLAYLIST-1 --- */
+    .playlist:hover img{
+        box-shadow: 0vw 0vw 1vw black;
+        transform: scale(1.06);
+        transition-duration: .3s;
+    }
+
+    .playlist:hover p{
+        transform: scale(1.06) translateY(0.3vw);
+        transition-duration: .3s;
+    }
+
+    /* ------------------------------------------- FOOTER ------------------------------------------------- */
+
+    .footer {
+        height: 8.5vw;
+        background-color: rgb(40, 47, 146);
+        color: white;
+        text-align: center;
+        letter-spacing: 0.1vw;
+    }
+
+    .footer-ul {
+        margin-top: 1.5vw;
+    }
+
+    .footer-ul li {
+        display: inline-block;
+        font-size: 5vw;
+    }
+
+    .footer-ul li:first-child {
+       font-size: 2vw;
+    }
+
+    .footer-ul li:nth-child(2) a{
+        padding: 0vw 4vw;
+    }
+
+    .footer-ul li:nth-child(3) {
+        font-size: 2.5vw;
+    }
+
+    .footer-ul a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-ul a:hover {
+        color: black;
+        transition: .2s;
+    }
+}

@@ -1,0 +1,134 @@
+@media screen and (max-width: 1000px) and (min-height: 550px){
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Bangers', 'Archivo Black', cursive; 
+      }
+    
+    html, body {
+        height: 100%;
+        user-select: none;
+    }
+
+    body {
+        background-image: url("../pictures/backgroud-pink.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+        height: 100%;
+    }
+
+    .flex-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* ----------------------- HEADER -------------------------- */
+    .header {
+        width: 100%;
+        height: 22vw;
+        background-color: rgb(40, 47, 146);
+        box-shadow: 0vw 0vw 5vw black;
+        text-align: center;
+    }
+
+    .header img {
+        width: 50vw;
+        height: auto;
+        margin-top: 3.5vw;
+    }
+/* ----------------------- RULETA -------------------------- */
+
+    .ruleta-box {
+        margin-top: 25vw;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .ruleta-box img {
+        width: 85vw;
+        height: auto;
+        z-index: 100;
+        transition: all 5s;    
+    }
+
+/* -------------------- LEVITACION ------------------- */  
+
+    .header img {
+        animation: levitate-animation 2.5s ease-in-out infinite;
+    }
+    @keyframes levitate-animation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-0.5vw);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+/* ----------------------- VARA -------------------------- */
+
+    .vara {
+        height: 15vw;
+        width: 2vw;
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 0vw 0vw 8vw 8vw;
+        outline: 0.15vw solid #000000;
+        border-top: 0.5vw solid rgb(40, 47, 146);
+        position: absolute;
+        top: 82.5vw;
+        right: 10vw;
+        rotate: 90deg;
+        z-index: 1000;
+    }
+/* ----------------------- FOOTER -------------------------- */
+
+    .footer {
+        width: 100%;
+        height: 25vw;
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+    }
+
+    .footer-ul {
+        margin-top: 3vw;
+    }
+
+    .footer-ul li {
+        display: inline-block;
+        margin-bottom: 3vw;
+    }
+    
+    .texto {
+        font-size: 4vw;
+        text-decoration: none;
+        color: white;
+        padding: 2vw 0vw;
+        letter-spacing: 0.1vw;
+    }
+
+    .volver {
+        font-size: 8vw;
+        text-decoration: none;
+        color: white;
+        padding: 1vw 18vw;
+        border-top: 0.1vw solid white;
+    }
+
+    .texto:hover {
+        color:black;
+        transition: 1s;
+    }
+
+    .volver:hover {
+        color:black;
+        transition: 1s;
+    }
+
+}

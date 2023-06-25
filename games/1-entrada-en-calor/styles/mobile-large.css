@@ -1,0 +1,158 @@
+@media screen and (max-width: 1000px) and (min-height: 550px){
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Bangers', 'Archivo Black', cursive; 
+      }
+    
+    html, body {
+        height: 100%;
+        user-select: none;
+    }
+
+    body {
+        background-image: url("../pictures/backgroud-pink.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+        height: 100%;
+    }
+
+    .flex-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* ----------------------- HEADER -------------------------- */
+    .header {
+        width: 100%;
+        height: 25vw;
+        background-color: rgb(40, 47, 146);
+        box-shadow: 0vw 0vw 5vw black;
+        text-align: center;
+    }
+
+    .header img {
+        width: 55vw;
+        height: auto;
+        margin-top: 5vw;
+    }
+
+    /* -------------------- LEVITACION ------------------- */  
+    .header img {
+        animation: levitate-animation 2.5s ease-in-out infinite;
+      }
+
+      @keyframes levitate-animation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-0.5vw);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+/* ----------------------- RULETA -------------------------- */
+
+    .contenedor-ruleta {
+        margin-top: 40vw;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .ruleta-box {
+        margin: auto;
+        height: 38vw;
+        width: 80%;
+        overflow: hidden;
+        border-bottom: 0.5vw solid black;
+    }
+
+    .ruleta-box img {
+        margin-top: 0vw;
+        width: 100vw;
+        height: auto;
+    
+    }
+    
+    .ruleta-box img {
+        z-index: 100;
+        transition: all 4s;
+    }
+
+/* ----------------------- VARA -------------------------- */
+    .vara {
+        height: 8vw;
+        width: 1.5vw;
+        background-color: #ffffff;
+        margin: auto;
+        border-radius: 0vw 0vw 8vw 8vw;
+        outline: 0.15vw solid #000000;
+        position: absolute;
+        top: 62vw;
+        right: 49.5%;
+        z-index: 1000;
+    }
+
+/* ----------------------- FOOTER -------------------------- */
+
+    .footer {
+        width: 100%;
+        height: 50vw;
+        background-color: rgb(40, 47, 146);
+        text-align: center;
+    }
+
+    .footer-ul {
+        margin-top: 10vw;
+        list-style: none;
+    }
+
+    .footer-ul li {
+        margin-bottom: 1vw;
+        list-style: none;
+    }
+    
+    .footer-title {
+        margin-top: 5vw;
+        font-size: 10vw;
+        text-decoration: none;
+        color: white;
+        padding: 0.5vw 0vw;
+        letter-spacing: 0.1vw;
+        font-weight: 100;
+    }
+
+    .texto {
+        font-size: 3vw;
+        text-decoration: none;
+        color: white;
+        padding: 0.5vw 0vw;
+        letter-spacing: 0.1vw;
+        border-top: 0.1vw solid white;
+        padding: 4vw 0vw;
+    }
+
+    .volver {
+        font-size: 6vw;
+        text-decoration: none;
+        color: white;
+        padding: 0.2vw 5vw;
+        margin-top: 1vw;
+    }
+
+    .texto:hover {
+        color:black;
+        transition: 0.2s;
+    }
+
+    .volver:hover {
+        color:black;
+        transition: 0.2s;
+    }
+
+}
